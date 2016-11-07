@@ -9,79 +9,79 @@ image_speed=0; //animation speed
 o_frisk.step
 -=-=-=-=-=-=-=-=-
 //movement
-if(keyboard_check(vk_down))&&(!place_meeting(x,y+myspeed,o_collision)){
+if(keyboard_check(vk_down))&&(!place_meeting(x,y+myspeed,o_collision)){ //pressing down and not colliding
 y+=myspeed;
 mymove=1;
 }
 
-if(keyboard_check(vk_up))&&(!place_meeting(x,y-myspeed,o_collision)){
+if(keyboard_check(vk_up))&&(!place_meeting(x,y-myspeed,o_collision)){ //pressing up and not colliding
 y-=myspeed;
 mymove=1;
 }
 
-if(keyboard_check(vk_right))&&(!place_meeting(x+myspeed,y,o_collision)){
+if(keyboard_check(vk_right))&&(!place_meeting(x+myspeed,y,o_collision)){ //pressing right and not colliding
 x+=myspeed;
 mymove=1;
 }
 
-if(keyboard_check(vk_left))&&(!place_meeting(x-myspeed,y,o_collision)){
+if(keyboard_check(vk_left))&&(!place_meeting(x-myspeed,y,o_collision)){ //pressing left and not colliding
 x-=myspeed;
 mymove=1;
 }
 
-if(keyboard_check_released(vk_down)){
+if(keyboard_check_released(vk_down)){ //releasing down
 mymove=0;
 }
 
-if(keyboard_check_released(vk_up)){
+if(keyboard_check_released(vk_up)){ //releasing up
 mymove=0;
 }
 
-if(keyboard_check_released(vk_right)){
+if(keyboard_check_released(vk_right)){ //releasing right
 mymove=0;
 }
 
-if(keyboard_check_released(vk_left)){
+if(keyboard_check_released(vk_left)){ //releasing left
 mymove=0;
 }
 
-if(mymove=1){
+if(mymove=1){ //start animation
 image_speed=0.2;
 }
-else{
+else{ //stop animation
 image_speed=0;
 image_index=0;
 }
 
 //direction
-if(keyboard_check(vk_down)){
+if(keyboard_check(vk_down)){ //pressing down
 mydir=0;
 }
 
-if(keyboard_check(vk_up)){
+if(keyboard_check(vk_up)){ //pressing up
 mydir=1;
 }
 
-if(keyboard_check(vk_right)){
+if(keyboard_check(vk_right)){ //pressing right
 mydir=2;
 }
 
-if(keyboard_check(vk_left)){
+if(keyboard_check(vk_left)){ //pressing left
 mydir=3;
 }
 
 if(mydir=0){
-sprite_index=s_frisk_down;
+sprite_index=s_frisk_down; //facing down
 }
 
 if(mydir=1){
-sprite_index=s_frisk_up;
+sprite_index=s_frisk_up; //facing up
 }
 
 if(mydir=2){
-sprite_index=s_frisk_right;
+sprite_index=s_frisk_right; //facing right
 }
 
 if(mydir=3){
-sprite_index=s_frisk_left;
+sprite_index=s_frisk_left;  //facing left
 }
